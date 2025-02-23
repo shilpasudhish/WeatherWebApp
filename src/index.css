@@ -1,0 +1,14 @@
+@import "tailwindcss";
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
