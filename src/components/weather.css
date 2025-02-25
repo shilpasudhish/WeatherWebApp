@@ -1,0 +1,167 @@
+/*main div*/
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Padding inside the div */
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #2f4680, #500ae4);
+  max-width: 600px; /* Limit the width of the component */
+  margin: 0 auto; /* Center the container */
+  height: auto; /* Allow the div to only take up the space required by the content */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/*current location div starts here*/
+
+.current-location-weather {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Slight dark background to match the overall aesthetic */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Keep the same rounded corners as the main container */
+  width: 100%;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Align icon, temperature, and location in the center */
+.current-weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adequate space between elements */
+}
+
+/* Same icon size as the weather icons */
+.weather-icon {
+  width: 80px;
+  height: auto;
+}
+
+/* Layout for the temperature and location text */
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.temp {
+  font-size: 35px; /* Larger font size for emphasis */
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+/* Styling for the location name */
+.location {
+  font-size: 22px;
+  color: #ddd;
+  margin: 5px 0;
+} /*current location div end here*/
+
+/*weather data by city - styling starts here */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  color: #626262;
+  background: #ebfffc;
+  font-size: 18px;
+}
+
+.search-bar img {
+  width: 15px;
+  padding: 15px;
+  border-radius: 50%;
+  background: #ebfffc;
+  cursor: pointer;
+}
+
+.weather-icon {
+  width: 100px;
+  margin: 20px 0;
+}
+
+.temprature {
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+}
+
+.location {
+  color: #fff;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.weather-data {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between columns */
+}
+
+.weather-data .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 120px;
+}
+
+.weather-data .col span {
+  font-size: 14px;
+}
+
+.weather-data .col img {
+  width: 40px;
+  margin-top: 10px;
+}
+/*weather data by city ends here */
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .weather {
+    padding: 20px;
+    max-width: 500px; /* Decrease the width on medium-sized screens */
+  }
+  .weather-data .col {
+    width: 48%; /* Allow 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .weather {
+    max-width: 100%; /* Take up full width on smaller screens */
+    padding: 15px;
+  }
+
+  .weather-data .col {
+    width: 100%; /* Stack items in one column on small screens */
+  }
+
+  .search-bar {
+    flex-direction: column; /* Stack the search bar items on small screens */
+  }
+}
